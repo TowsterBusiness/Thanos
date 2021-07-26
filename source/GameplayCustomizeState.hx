@@ -207,35 +207,35 @@ class GameplayCustomizeState extends MusicBeatState
             {
                 // FlxG.log.add(i);
                 var babyArrow:FlxSprite = new FlxSprite(0, strumLine.y);
-                babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets', 'shared');
-                babyArrow.animation.addByPrefix('green', 'arrowUP');
-                babyArrow.animation.addByPrefix('blue', 'arrowDOWN');
-                babyArrow.animation.addByPrefix('purple', 'arrowLEFT');
-                babyArrow.animation.addByPrefix('red', 'arrowRIGHT');
+                babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets_2', 'shared');
+                babyArrow.animation.addByPrefix('green', 'arrowUP0');
+                babyArrow.animation.addByPrefix('blue', 'arrowDOWN0');
+                babyArrow.animation.addByPrefix('purple', 'arrowLEFT0');
+                babyArrow.animation.addByPrefix('red', 'arrowRIGHT0');
                 babyArrow.antialiasing = true;
                 babyArrow.setGraphicSize(Std.int(babyArrow.width * 0.7));
                 switch (Math.abs(i))
                 {
                     case 0:
                         babyArrow.x += Note.swagWidth * 0;
-                        babyArrow.animation.addByPrefix('static', 'arrowLEFT');
-                        babyArrow.animation.addByPrefix('pressed', 'left press', 24, false);
-                        babyArrow.animation.addByPrefix('confirm', 'left confirm', 24, false);
+                        babyArrow.animation.addByPrefix('static', 'arrowLEFT0');
+                        babyArrow.animation.addByPrefix('pressed', 'left press0', 24, false);
+                        babyArrow.animation.addByPrefix('confirm', 'left confirm0', 24, false);
                     case 1:
                         babyArrow.x += Note.swagWidth * 1;
-                        babyArrow.animation.addByPrefix('static', 'arrowDOWN');
-                        babyArrow.animation.addByPrefix('pressed', 'down press', 24, false);
-                        babyArrow.animation.addByPrefix('confirm', 'down confirm', 24, false);
+                        babyArrow.animation.addByPrefix('static', 'arrowDOWN0');
+                        babyArrow.animation.addByPrefix('pressed', 'down press0', 24, false);
+                        babyArrow.animation.addByPrefix('confirm', 'down confirm0', 24, false);
                     case 2:
                         babyArrow.x += Note.swagWidth * 2;
-                        babyArrow.animation.addByPrefix('static', 'arrowUP');
-                        babyArrow.animation.addByPrefix('pressed', 'up press', 24, false);
-                        babyArrow.animation.addByPrefix('confirm', 'up confirm', 24, false);
+                        babyArrow.animation.addByPrefix('static', 'arrowUP0');
+                        babyArrow.animation.addByPrefix('pressed', 'up press0', 24, false);
+                        babyArrow.animation.addByPrefix('confirm', 'up confirm0', 24, false);
                     case 3:
                         babyArrow.x += Note.swagWidth * 3;
-                        babyArrow.animation.addByPrefix('static', 'arrowRIGHT');
-                        babyArrow.animation.addByPrefix('pressed', 'right press', 24, false);
-                        babyArrow.animation.addByPrefix('confirm', 'right confirm', 24, false);
+                        babyArrow.animation.addByPrefix('static', 'arrowRIGHT0');
+                        babyArrow.animation.addByPrefix('pressed', 'right press0', 24, false);
+                        babyArrow.animation.addByPrefix('confirm', 'right confirm0', 24, false);
                 }
                 babyArrow.updateHitbox();
                 babyArrow.scrollFactor.set();
