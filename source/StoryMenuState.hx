@@ -301,7 +301,7 @@ class StoryMenuState extends MusicBeatState
 	var selectedWeek:Bool = false;
 	var stopspamming:Bool = false;
 
-	function selectWeek()
+	public function selectWeek()
 	{
 		if (weekUnlocked[curWeek])
 		{

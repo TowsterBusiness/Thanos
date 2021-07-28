@@ -104,6 +104,7 @@ class Caching extends MusicBeatState
 
         trace("LOADING: " + toBeDone + " OBJECTS.");
 
+        /*
         for (i in images)
         {
             var replaced = i.replace(".png","");
@@ -119,6 +120,10 @@ class Caching extends MusicBeatState
             trace("cached " + i);
             done++;
         }
+*/
+        FlxG.bitmap.add(Paths.image("menuBGBlue","preload"));
+        trace("cached menuBGBlue");
+        done++;
 
         trace("Finished caching...");
 

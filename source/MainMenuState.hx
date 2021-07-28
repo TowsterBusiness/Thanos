@@ -241,7 +241,23 @@ class MainMenuState extends MusicBeatState
 		switch (daChoice)
 		{
 			case 'story mode':
-				FlxG.switchState(new StoryMenuState());
+				var poop:String = Highscore.formatSong('Tutorial', 2);
+				PlayState.storyPlaylist = ['Tutorial'];
+				PlayState.sicks = 0;
+				PlayState.bads = 0;
+				PlayState.shits = 0;
+				PlayState.goods = 0;
+				PlayState.campaignMisses = 0;
+				PlayState.SONG = Song.loadFromJson(poop, PlayState.storyPlaylist[0]);
+				PlayState.storyWeek = 0;
+				PlayState.campaignScore = 0;
+				PlayState.isStoryMode = true;
+				new FlxTimer().start(1, function(tmr:FlxTimer)
+				{
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+				});
+				
+				//FlxG.switchState(new StoryMenuState());
 				trace("Story Menu Selected");
 			case 'freeplay':
 				FlxG.switchState(new FreeplayState());
